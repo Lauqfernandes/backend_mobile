@@ -1,0 +1,21 @@
+//selecionar o database
+use('projetoMobile')
+
+//remover a collection
+db.categorias.drop()
+
+//cria a collection com a validação do schema
+db.createCollection('categorias'), {
+    validator: {
+        $jsonSchema:{
+            bsonType: 'object',
+            required: {'nome', 'status'},
+            properties: {
+                nome: {bsonType: 'string'}, 
+                status: {bsonType: 'boolean'}
+            }
+
+        }
+    }
+}
+
