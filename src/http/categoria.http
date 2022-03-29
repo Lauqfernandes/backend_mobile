@@ -1,0 +1,48 @@
+//teste de requisições REST
+
+@baseURL = htpp://localhost:4000
+
+###
+//GET - Lista todas as categorias
+
+GET {{baseURL}}//categorias
+Content-Type: application/json
+
+###
+//POST - Inclui novas categorias
+
+POST {{baseURL}}//categorias
+Content-Type: application/json
+
+{
+    "nome":"hjahfkha",
+    "status":"true"
+}
+
+###
+//GET ID - Lista caegoria pelo ID
+
+GET {{baseURL}}//categorias/id......
+Content-Type: application/json
+
+###
+//GET Nome - Lista caegoria pelo nome
+
+GET {{baseURL}}//categorias/nome/nome....
+Content-Type: application/json
+
+###
+//PUT - altera dados da categoria
+
+PUT {{baseURL}}//categorias/id.....
+Content-Type: application/json
+{
+    "id_": "djfgkjaghsflh",
+    "nome":"hjahfkha",
+    "status":"true",
+}
+
+###
+//DELETE - deleta cat pelo id
+DELETE {{baseURL}}//categorias/id.....
+Content-Type: application/json
